@@ -1,0 +1,56 @@
+
+<!-- Form-->
+<div class="form">
+  <div class="form-toggle"></div>
+  <div class="form-panel one">
+    <div class="form-header">
+      <h1>Account Login</h1>
+    </div>
+    <div class="form-content">
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input [(ngModel)]="loginRequest.username" [ngModelOptions]="{standalone: true}" name="UserName" type="text" class="form-text" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input [(ngModel)]="loginRequest.password" [ngModelOptions]="{standalone: true}" name="Password" type="password" class="form-text" placeholder="Şifre">
+        </div>
+        <div class="form-group">
+          <label class="form-remember">
+            <input type="checkbox"/>Remember Me
+          </label><a class="form-recovery" href="#">Forgot Password?</a>
+        </div>
+        <div class="form-group">
+          <button (click)="login()" type="button">Giriş yap</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="form-panel two">
+    <div class="form-header">
+      <h1>Register Account</h1>
+    </div>
+    <div class="form-content">
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input [(ngModel)]="registerRequest.userName" [ngModelOptions]="{standalone: true}" type="text" name="UserName" class="form-text" placeholder="Ad">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input [(ngModel)]="registerRequest.password" [ngModelOptions]="{standalone: true}" type="password" name="Password" class="form-text" placeholder="Şifre">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input [(ngModel)]="registerRequest.email" [ngModelOptions]="{standalone: true}" type="text" name="Email" class="form-text" placeholder="E-posta">
+        </div>
+        <div class="form-group">
+          <button (click)="register()" type="button">Üye ol</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="pen-footer"><a href="https://www.behance.net/gallery/30478397/Login-Form-UI-Library" target="_blank"><i class="material-icons">arrow_backward</i>View on Behance</a><a href="https://github.com/andyhqtran/UI-Library/tree/master/Login%20Form" target="_blank">View on Github<i class="material-icons">arrow_forward</i></a></div>
+<p-toast></p-toast>
